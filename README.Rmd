@@ -1,0 +1,58 @@
+---
+title: "README"
+author: "Liu Xiaohan"
+date: "2020/3/17"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## (1)
+
+> bookdown::render_book("index.Rmd",'bookdown::pdf_book')
+Error in bookdown::render_book("index.Rmd", "bookdown::pdf_book") : 
+  No input R Markdown files found from the current directory C:/Users/lenovo/Documents or in the rmd_files field of _bookdown.yml
+
+Solution:
+> setwd("C:/Users/lenovo/Desktop/adv-r-master")
+
+
+
+## (2)
+
+Quitting from lines 223-235 (Introduction.Rmd)
+Error in Rscript_render(f, render_args, render_meta, add1, add2) : 
+  Failed to compile Introduction.Rmd
+  
+Solution a:
+tinytex::pdflatex('test.tex')
+Result:
+Error: LaTeX failed to compile test.tex.
+
+Solution b:
+install.packages('tinytex')
+tinytex::install_tinytex()
+<div align=center>
+ ![ ](C:\Users\lenovo\Desktop\photo.png)
+</div>
+&emsp;&emsp;[URL：https://yihui.org/tinytex/]
+
+Result:
+Still show "Error in Rscript_render(f, render_args, render_meta, add1, add2) : 
+  Failed to compile Introduction.Rmd"
+
+Solution c:
+Download the CTEX and Pandoc.
+&emsp;&emsp;[URL：http://dapengde.com/archives/19141?replytocom=151208]
+
+Result:
+Still show "Error in Rscript_render(f, render_args, render_meta, add1, add2) : 
+  Failed to compile Introduction.Rmd"
+
+
+
+
+
+At first I thought it was a file format problem, but then I realized it probably wasn't. So I tried it on the command line" bookdown::render_book("index.Rmd",output_format = 'bookdown::gitbook')", and the result was the same. I'm sorry I tried but I haven't found a solution yet.
