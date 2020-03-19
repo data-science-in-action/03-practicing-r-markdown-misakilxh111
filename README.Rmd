@@ -55,4 +55,4 @@ Still show "Error in Rscript_render(f, render_args, render_meta, add1, add2) :
 
 
 
-At first I thought it was a file format problem, but then I realized it probably wasn't. So I tried it on the command line" bookdown::render_book("index.Rmd",output_format = 'bookdown::gitbook')", and the result was the same. I'm sorry I tried but I haven't found a solution yet.
+At first I thought it was a file format problem, but then I realized it probably wasn't. So I tried it on the command line" bookdown::render_book("index.Rmd",output_format = 'bookdown::gitbook')", and the result was the same. I have tried but I haven't found a solution yet. I'm so sorry.
